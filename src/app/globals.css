@@ -1,0 +1,243 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme {
+  --color-brand-navy: #0b2447;
+  --color-brand-navyDeep: #081b36;
+  --color-brand-gold: #f0b429;
+  --color-brand-red: #e63946;
+  --color-brand-teal: #0e7c86;
+  --color-brand-bg: #eaf4fc;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ================================
+   Floating Promise Badge
+   ================================ */
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+    box-shadow: 0 15px 45px rgba(15, 23, 42, 0.15);
+  }
+  50% {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 48px rgba(15, 23, 42, 0.18);
+  }
+}
+
+.animate-float {
+  animation: float 1.7s ease-in-out infinite;
+}
+
+/* ================================
+   Hero Fade-ins
+   ================================ */
+
+@keyframes hero-fade {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-hero-fade {
+  animation: hero-fade 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* Timed to start right after line 2's cursor disappears (~4.08s) */
+.animate-description {
+  opacity: 0;
+  animation: hero-fade 0.8s cubic-bezier(0.16, 1, 0.3, 1) 4.1s both;
+}
+
+.animate-buttons {
+  opacity: 0;
+  animation: hero-fade 0.8s cubic-bezier(0.16, 1, 0.3, 1) 4.4s both;
+}
+
+/* ================================
+   Hero Typing Animation
+   ================================ */
+
+@keyframes type-reveal {
+  from {
+    width: 0;
+  }
+  to {
+    width: 80%;
+  }
+}
+
+/* Cursor is a flat "on" state for its whole window — no blending,
+   no fade. The moment the animation ends, it snaps back to the base
+   transparent border below. That's what removes the "drifting" look. */
+@keyframes cursor-on {
+  0%,
+  100% {
+    border-color: currentColor;
+  }
+}
+
+/* Shared box model. Cursor hidden by default on BOTH lines. */
+.typing-line {
+  display: block;
+  width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid transparent;
+}
+
+/* Line 1: "Every Patient." — 14 characters
+   Types from 0.4s -> 2.0s. Cursor stays on through typing, plus a
+   ~2-character tail (0.23s), then disappears at 2.23s — handing off
+   to line 2 with no overlap. */
+.typing-line-1 {
+  animation:
+    type-reveal 1.6s steps(14, end) 0.4s forwards,
+    cursor-on 1.85s steps(1, end) 0.4s;}
+
+/* Line 2: "Every Moment." — 13 characters
+   Starts the instant line 1's cursor is gone (2.23s), types until
+   3.83s. Cursor holds a ~2-character tail then disappears at 4.08s,
+   just before the description fades in. */
+.typing-line-2 {
+  animation:
+    type-reveal 1.6s steps(13, end) 2.23s forwards,
+    cursor-on 1.85s steps(1, end) 2.23s;
+}
+
+/* ================================
+   Emergency Button
+   ================================ */
+
+.emergency-button {
+  position: relative;
+  isolation: isolate;
+}
+
+.emergency-button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: inherit;
+  background: #e63946;
+  opacity: 0.6;
+  animation: emergency-ring 2s ease-out infinite;
+}
+
+@keyframes emergency-ring {
+  0% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  70%,
+  100% {
+    transform: scale(1.18);
+    opacity: 0;
+  }
+}
+
+/* ================================
+   Accessibility
+   ================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .animate-float,
+  .typing-line-1,
+  .typing-line-2,
+  .animate-hero-fade,
+  .animate-description,
+  .animate-buttons,
+  .emergency-button::before {
+    animation: none;
+    opacity: 1;
+    transform: none;
+    width: auto;
+    border-color: transparent;
+  }
+}
+
+@keyframes underline-draw {
+  from {
+    transform: scaleX(0);
+    transform-origin: left;
+  }
+
+  to {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+}
+
+.animate-underline {
+  animation: underline-draw 0.7s ease-out 0.4s both;
+}
+
+/* Appointment Hero Animation */
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.7s ease-out both;
+}
+
+.animate-fade-up-delay-1 {
+  animation: fade-up 0.7s ease-out 0.15s both;
+}
+
+.animate-fade-up-delay-2 {
+  animation: fade-up 0.7s ease-out 0.3s both;
+}
+
+.animate-fade-up-delay-3 {
+  animation: fade-up 0.7s ease-out 0.45s both;
+}
+
+@keyframes support-breathe {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.08);
+  }
+}
+
+.animate-support-breathe {
+  animation: support-breathe 2.8s ease-in-out infinite;
+}
