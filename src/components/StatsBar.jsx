@@ -5,7 +5,6 @@ import {
   Building2,
   Baby,
   Pill,
-  FlaskConical,
 } from "lucide-react";
 
 const stats = [
@@ -15,7 +14,6 @@ const stats = [
   { icon: Building2, label: "Modular OT" },
   { icon: Baby, label: "ICU & NICU" },
   { icon: Pill, label: "24x7 Pharmacy" },
-  { icon: FlaskConical, label: "24x7 Lab" },
 ];
 
 export default function StatsBar() {
@@ -23,7 +21,7 @@ export default function StatsBar() {
     <section className="bg-brand-bg py-6 sm:py-8">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="overflow-hidden rounded-2xl border border-brand-navy/15 bg-white shadow-[0_8px_30px_rgba(15,23,42,0.06)]">
-          <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6">
             {stats.map(({ icon: Icon, label }, index) => (
               <div
                 key={label}

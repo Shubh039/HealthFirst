@@ -5,4 +5,5 @@ export const siteConfig = {
   description:
     "HealthFirst Hospital provides comprehensive healthcare backed by experienced doctors, advanced technology and compassionate care.",
   logo: "/images/logo.png",
+  logoWhite: "/images/logo-white.png",
 };

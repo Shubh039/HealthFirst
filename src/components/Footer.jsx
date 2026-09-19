@@ -34,9 +34,9 @@ const googleMapsEmbedUrl =
 
 const quickLinks = [
   { label: "Home", href: "/" },
-  { label: "About Us", href: "#" },
-  { label: "Doctors", href: "#" },
-  { label: "Specialities", href: "#" },
+  { label: "About Us", href: "/about" },
+  { label: "Doctors", href: "/doctors" },
+  { label: "Specialities", href: "/specialities" },
   { label: "Services & Facilities", href: "#" },
   { label: "Blogs", href: "#" },
 ];
@@ -70,7 +70,7 @@ export default function Footer() {
             <Link href="/" className="inline-flex items-center">
               <div className="relative h-16 w-52">
                 <Image
-                  src={siteConfig.logo}
+                  src={siteConfig.logoWhite}
                   alt={`${siteConfig.name} logo`}
                   fill
                   sizes="208px"
@@ -214,7 +214,7 @@ export default function Footer() {
                 />
 
                 <a
-                  href="tel:+911234567890"
+                  href="tel:+917678368307"
                   className="text-sm text-white/55 transition-colors hover:text-white"
                 >
                   +91 76783 68307
@@ -262,7 +262,7 @@ export default function Footer() {
               </div>
 
               <a
-                href="tel:+911234567890"
+                href="tel:+911135650483"
                 className="mt-5 flex items-center justify-between rounded-xl bg-brand-red px-4 py-3 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-brand-red/20"
               >
 
@@ -435,7 +435,7 @@ export default function Footer() {
             </span>
 
             <a
-              href="#"
+              href="https://www.instagram.com/healthfirsthospital"
               aria-label="Instagram"
               className="flex h-9 w-9 items-center justify-center rounded-full border border-white/10 bg-white/[0.03] text-white/45 transition-all duration-300 hover:-translate-y-1 hover:border-brand-gold/30 hover:bg-brand-gold/10 hover:text-brand-gold"
             >

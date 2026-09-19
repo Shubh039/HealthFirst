@@ -7,6 +7,7 @@ import { FaWhatsapp } from "react-icons/fa";
 import Reveal from "@/components/Reveal";
 
 const departments = [
+  "Not sure",
   "Internal Medicine",
   "Obs & Gynae",
   "Orthopedics",
@@ -22,6 +23,7 @@ const departments = [
 ];
 
 const doctors = [
+  "No preference",
   "Dr. Dalimi Mushahary",
   "Dr. Akshay Yadav",
   "Dr. Saurabh Gadi",
@@ -237,6 +239,7 @@ export default function AppointmentForm() {
                   onChange={handleChange}
                   tabIndex={-1}
                   autoComplete="off"
+                  suppressHydrationWarning
                   className="hidden"
                   aria-hidden="true"
                 />
@@ -255,6 +258,7 @@ export default function AppointmentForm() {
                     value={formData.fullName}
                     onChange={handleChange}
                     placeholder="Full Name *"
+                    suppressHydrationWarning
                     className="rounded-md border border-gray-200 px-3 py-2 text-sm outline-none transition-all duration-200 placeholder:text-gray-400 focus:border-brand-gold/50 focus:ring-2 focus:ring-brand-gold/10"
                   />
 
@@ -267,6 +271,7 @@ export default function AppointmentForm() {
                     value={formData.phone}
                     onChange={handleChange}
                     placeholder="Phone Number *"
+                    suppressHydrationWarning
                     className="rounded-md border border-gray-200 px-3 py-2 text-sm outline-none transition-all duration-200 placeholder:text-gray-400 focus:border-brand-gold/50 focus:ring-2 focus:ring-brand-gold/10"
                   />
 
@@ -279,6 +284,7 @@ export default function AppointmentForm() {
                     value={formData.email}
                     onChange={handleChange}
                     placeholder="Email Address *"
+                    suppressHydrationWarning
                     className="rounded-md border border-gray-200 px-3 py-2 text-sm outline-none transition-all duration-200 placeholder:text-gray-400 focus:border-brand-gold/50 focus:ring-2 focus:ring-brand-gold/10"
                   />
 
@@ -291,6 +297,7 @@ export default function AppointmentForm() {
                     value={formData.date}
                     min={getTodayString()}
                     onChange={handleChange}
+                    suppressHydrationWarning
                     className="rounded-md border border-gray-200 px-3 py-2 text-sm text-gray-500 outline-none transition-all duration-200 focus:border-brand-gold/50 focus:ring-2 focus:ring-brand-gold/10"
                   />
 
@@ -301,6 +308,7 @@ export default function AppointmentForm() {
                     name="time"
                     value={formData.time}
                     onChange={handleChange}
+                    suppressHydrationWarning
                     className="rounded-md border border-gray-200 px-3 py-2 text-sm text-gray-500 outline-none transition-all duration-200 focus:border-brand-gold/50 focus:ring-2 focus:ring-brand-gold/10"
                   >
                     <option value="">
@@ -321,6 +329,7 @@ export default function AppointmentForm() {
                     name="department"
                     value={formData.department}
                     onChange={handleChange}
+                    suppressHydrationWarning
                     className="rounded-md border border-gray-200 px-3 py-2 text-sm text-gray-500 outline-none transition-all duration-200 focus:border-brand-gold/50 focus:ring-2 focus:ring-brand-gold/10"
                   >
                     <option value="">
@@ -341,6 +350,7 @@ export default function AppointmentForm() {
                     name="doctor"
                     value={formData.doctor}
                     onChange={handleChange}
+                    suppressHydrationWarning
                     className="rounded-md border border-gray-200 px-3 py-2 text-sm text-gray-500 outline-none transition-all duration-200 focus:border-brand-gold/50 focus:ring-2 focus:ring-brand-gold/10"
                   >
                     <option value="">
@@ -365,6 +375,7 @@ export default function AppointmentForm() {
                   onChange={handleChange}
                   placeholder="Reason for Visit (Optional)"
                   rows={3}
+                  suppressHydrationWarning
                   className="w-full resize-none rounded-md border border-gray-200 px-3 py-2 text-sm outline-none transition-all duration-200 placeholder:text-gray-400 focus:border-brand-gold/50 focus:ring-2 focus:ring-brand-gold/10"
                 />
 
@@ -383,6 +394,7 @@ export default function AppointmentForm() {
                 <button
                   type="submit"
                   disabled={status === "loading"}
+                  suppressHydrationWarning
                   className="w-full rounded-full bg-brand-gold py-3 text-sm font-semibold text-brand-navy transition-all duration-300 hover:-translate-y-0.5 hover:opacity-90 hover:shadow-md disabled:cursor-not-allowed disabled:opacity-60"
                 >
                   {status === "loading"

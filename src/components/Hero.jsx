@@ -48,7 +48,7 @@ export default function Hero() {
             </Link>
 
             <Link
-              href="#"
+              href="tel:+917678368307"
               className="flex items-center gap-2 bg-green-500 rounded-full font-semibold border border-white/40 px-6 py-3 text-sm font-medium text-white transition-all duration-300 hover:-translate-y-1 hover:border-white hover:bg-green-500 hover:shadow-xl hover:shadow-green-500/30"
             >
               <Phone className="h-4 w-4" />
@@ -56,7 +56,7 @@ export default function Hero() {
             </Link>
 
             <Link
-              href="#"
+              href="tel:+911135650483"
               className="emergency-button flex items-center gap-2 rounded-full bg-brand-red px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-brand-red/30 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-brand-red/40"
             >
               <ShieldPlus className="h-4 w-4" />

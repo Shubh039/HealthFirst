@@ -181,7 +181,7 @@ export default function DoctorsPage() {
           <div className="grid items-end gap-12 lg:grid-cols-[1fr_auto]">
 
             {/* Hero Content */}
-            <Reveal className="max-w-3xl">
+            <div className="max-w-3xl">
 
               <div className="flex items-center gap-3">
                 <span className="h-px w-10 bg-brand-gold" />
@@ -206,10 +206,10 @@ export default function DoctorsPage() {
                 patient at HealthFirst Hospital.
               </p>
 
-            </Reveal>
+            </div>
 
             {/* Hero Stats */}
-            <Reveal
+            <div
                 className="relative flex min-h-[270px] flex-col justify-end"
                 delay="0.15s"
                 >
@@ -268,7 +268,7 @@ export default function DoctorsPage() {
                     </div>
 
                 </div>
-            </Reveal>
+            </div>
           </div>
         </div>
       </section>
@@ -282,8 +282,6 @@ export default function DoctorsPage() {
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_10%_50%,rgba(14,124,134,0.035),transparent_30%),radial-gradient(circle_at_90%_50%,rgba(240,180,41,0.04),transparent_30%)]" />
 
         <div className="relative mx-auto max-w-7xl px-6 py-5 lg:px-8">
-
-          <Reveal>
 
             <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
 
@@ -330,8 +328,6 @@ export default function DoctorsPage() {
 
             </div>
 
-          </Reveal>
-
         </div>
       </section>
 
@@ -353,10 +349,7 @@ export default function DoctorsPage() {
           <div className="grid gap-7 lg:grid-cols-2">
 
             {filteredDoctors.map((doctor, index) => (
-              <Reveal
-                key={doctor.name}
-                delay={`${Math.min(index * 0.08, 0.4)}s`}
-              >
+              <div key={doctor.name}>
 
                 <article className="group overflow-hidden rounded-[1.75rem] border border-brand-navy/10 bg-white shadow-[0_10px_40px_rgba(15,23,42,0.04)] transition-all duration-500 hover:-translate-y-1 hover:border-brand-gold/30 hover:shadow-[0_20px_55px_rgba(15,23,42,0.08)]">
 
@@ -487,14 +480,13 @@ export default function DoctorsPage() {
 
                 </article>
 
-              </Reveal>
+              </div>
             ))}
 
           </div>
 
           {/* No results */}
           {filteredDoctors.length === 0 && (
-            <Reveal>
 
               <div className="rounded-2xl border border-brand-navy/10 bg-white px-6 py-16 text-center">
 
@@ -510,7 +502,6 @@ export default function DoctorsPage() {
 
               </div>
 
-            </Reveal>
           )}
 
         </div>
@@ -522,8 +513,6 @@ export default function DoctorsPage() {
       <section className="px-6 pb-20 sm:pb-24 lg:px-8">
 
         <div className="mx-auto max-w-7xl">
-
-          <Reveal>
 
             <div className="relative overflow-hidden rounded-[2rem] bg-brand-navy px-7 py-12 sm:px-10 lg:px-14 lg:py-14">
 
@@ -595,8 +584,6 @@ export default function DoctorsPage() {
 
               </div>
             </div>
-
-          </Reveal>
 
         </div>
       </section>

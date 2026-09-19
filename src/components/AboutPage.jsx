@@ -242,7 +242,6 @@ export default function AboutPage() {
 
             <div>
 
-              <Reveal>
                 <div className="flex items-center gap-3">
                   <span className="h-px w-8 bg-brand-gold" />
 
@@ -250,9 +249,6 @@ export default function AboutPage() {
                     About HealthFirst
                   </p>
                 </div>
-              </Reveal>
-
-              <Reveal delay="0.15s">
                 <h1 className="mt-6 max-w-2xl text-4xl font-bold leading-[1.05] tracking-tight text-brand-navy sm:text-5xl lg:text-6xl">
                   More than a hospital.
 
@@ -260,17 +256,13 @@ export default function AboutPage() {
                     A place where care comes first.
                   </span>
                 </h1>
-              </Reveal>
 
-              <Reveal delay="0.3s">
                 <p className="mt-7 max-w-xl text-base leading-7 text-gray-600 sm:text-lg sm:leading-8">
                   HealthFirst Hospital was built with a simple belief:
                   healthcare should be accessible, compassionate and
                   clinically excellent — every patient, every moment.
                 </p>
-              </Reveal>
 
-              <Reveal delay="0.45s">
                 <div className="mt-9 flex flex-wrap gap-3">
 
                   <Link
@@ -292,14 +284,11 @@ export default function AboutPage() {
                   </a>
 
                 </div>
-              </Reveal>
 
             </div>
 
 
             {/* HERO IMAGE */}
-
-            <Reveal delay="0.2s">
 
               <div className="relative">
 
@@ -359,7 +348,6 @@ export default function AboutPage() {
 
               </div>
 
-            </Reveal>
 
           </div>
 
@@ -378,9 +366,8 @@ export default function AboutPage() {
 
           {stats.map((stat, index) => (
 
-            <Reveal
+            <div
               key={stat.label}
-              delay={`${index * 0.08}s`}
               className={`${
                 index !== 0
                   ? "border-brand-navy/10 lg:border-l"
@@ -400,7 +387,7 @@ export default function AboutPage() {
 
               </div>
 
-            </Reveal>
+            </div>
 
           ))}
 
@@ -424,8 +411,6 @@ export default function AboutPage() {
 
             {/* Heading */}
 
-            <Reveal>
-
               <div>
 
                 <div className="flex items-center gap-3">
@@ -442,12 +427,8 @@ export default function AboutPage() {
 
               </div>
 
-            </Reveal>
-
 
             {/* Story */}
-
-            <Reveal delay="0.15s">
 
               <div className="max-w-3xl">
 
@@ -483,8 +464,6 @@ export default function AboutPage() {
 
               </div>
 
-            </Reveal>
-
           </div>
 
         </div>
@@ -495,10 +474,7 @@ export default function AboutPage() {
       {/* =====================================================
           STORY IMAGE + VIDEO
       ===================================================== */}
-
-      <Reveal>
         <StoryMedia />
-      </Reveal>
 
 
       {/* =====================================================
@@ -508,8 +484,6 @@ export default function AboutPage() {
       <section className="bg-white px-6 py-24 sm:py-28 lg:px-8">
 
         <div className="mx-auto max-w-7xl">
-
-          <Reveal>
 
             <div className="max-w-2xl">
 
@@ -532,16 +506,13 @@ export default function AboutPage() {
 
             </div>
 
-          </Reveal>
-
 
           <div className="mt-14 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
 
             {values.map(({ icon: Icon, title, text }, index) => (
 
-              <Reveal
+              <div
                 key={title}
-                delay={`${index * 0.1}s`}
               >
 
                 <div className="group h-full rounded-2xl border border-brand-navy/10 bg-brand-bg/40 p-7 transition-all duration-500 hover:-translate-y-1 hover:border-brand-gold/30 hover:bg-white hover:shadow-[0_18px_45px_rgba(15,23,42,0.08)]">
@@ -565,7 +536,7 @@ export default function AboutPage() {
 
                 </div>
 
-              </Reveal>
+              </div>
 
             ))}
 
@@ -590,8 +561,6 @@ export default function AboutPage() {
 
           <div className="grid items-center gap-14 lg:grid-cols-[0.9fr_1.1fr]">
 
-            <Reveal>
-
               <div>
 
                 <p className="text-xs font-bold uppercase tracking-[0.2em] text-brand-gold">
@@ -604,10 +573,6 @@ export default function AboutPage() {
 
               </div>
 
-            </Reveal>
-
-
-            <Reveal delay="0.2s">
 
               <div>
 
@@ -652,8 +617,6 @@ export default function AboutPage() {
 
               </div>
 
-            </Reveal>
-
           </div>
 
         </div>
@@ -668,8 +631,6 @@ export default function AboutPage() {
       <section className="bg-brand-bg px-6 py-24 sm:py-28 lg:px-8">
 
         <div className="mx-auto max-w-7xl">
-
-          <Reveal>
 
             <div>
 
@@ -687,17 +648,12 @@ export default function AboutPage() {
 
             </div>
 
-          </Reveal>
-
 
           <div className="mt-14 grid gap-4 md:grid-cols-2">
 
             {promises.map((promise, index) => (
 
-              <Reveal
-                key={promise.number}
-                delay={`${index * 0.1}s`}
-              >
+              <div key={promise.number}>
 
                 <div className="group h-full rounded-2xl border border-brand-navy/10 bg-white p-7 transition-all duration-500 hover:-translate-y-1 hover:border-brand-gold/30 hover:shadow-[0_18px_45px_rgba(15,23,42,0.07)] sm:p-9">
 
@@ -723,7 +679,7 @@ export default function AboutPage() {
 
                 </div>
 
-              </Reveal>
+              </div>
 
             ))}
 
@@ -741,8 +697,6 @@ export default function AboutPage() {
       <section className="bg-white px-6 py-24 sm:py-28 lg:px-8">
 
         <div className="mx-auto max-w-7xl">
-
-          <Reveal>
 
             <div className="max-w-3xl">
 
@@ -765,8 +719,6 @@ export default function AboutPage() {
 
             </div>
 
-          </Reveal>
-
 
           <div className="mt-14 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
 
@@ -776,10 +728,7 @@ export default function AboutPage() {
 
               return (
 
-                <Reveal
-                  key={facility.title}
-                  delay={`${index * 0.08}s`}
-                >
+                <div key={facility.title}>
 
                   <div className="group h-full overflow-hidden rounded-2xl border border-brand-navy/10 bg-white shadow-[0_8px_30px_rgba(15,23,42,0.04)] transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_18px_45px_rgba(15,23,42,0.09)]">
 
@@ -829,7 +778,7 @@ export default function AboutPage() {
 
                   </div>
 
-                </Reveal>
+                </div>
 
               );
 
@@ -854,8 +803,6 @@ export default function AboutPage() {
 
           <div className="grid items-end gap-10 lg:grid-cols-[0.8fr_1.2fr]">
 
-            <Reveal>
-
               <div>
 
                 <div className="flex items-center gap-3">
@@ -872,11 +819,6 @@ export default function AboutPage() {
 
               </div>
 
-            </Reveal>
-
-
-            <Reveal delay="0.15s">
-
               <div>
 
                 <p className="text-base leading-7 text-gray-600 sm:text-lg sm:leading-8">
@@ -888,8 +830,6 @@ export default function AboutPage() {
 
               </div>
 
-            </Reveal>
-
           </div>
 
 
@@ -899,10 +839,7 @@ export default function AboutPage() {
 
             {leadership.map((person, index) => (
 
-              <Reveal
-                key={person.name}
-                delay={`${index * 0.1}s`}
-              >
+              <div key={person.name}>
 
                 <article className="group h-full overflow-hidden rounded-[1.5rem] border border-brand-navy/10 bg-white shadow-[0_8px_30px_rgba(15,23,42,0.04)] transition-all duration-500 hover:-translate-y-1 hover:border-brand-gold/30 hover:shadow-[0_20px_50px_rgba(15,23,42,0.10)]">
 
@@ -959,14 +896,11 @@ export default function AboutPage() {
 
                 </article>
 
-              </Reveal>
+              </div>
 
             ))}
 
           </div>
-
-
-          <Reveal delay="0.2s">
 
             <div className="mt-10 flex flex-wrap items-center justify-between gap-5 rounded-2xl border border-brand-navy/10 bg-white px-6 py-5 shadow-[0_8px_30px_rgba(15,23,42,0.04)]">
 
@@ -1009,8 +943,6 @@ export default function AboutPage() {
 
             </div>
 
-          </Reveal>
-
         </div>
 
       </section>
@@ -1023,8 +955,6 @@ export default function AboutPage() {
       <section className="bg-white px-6 py-24 sm:py-28 lg:px-8">
 
         <div className="mx-auto max-w-7xl">
-
-          <Reveal>
 
             <div className="flex flex-col justify-between gap-6 sm:flex-row sm:items-end">
 
@@ -1051,17 +981,12 @@ export default function AboutPage() {
 
             </div>
 
-          </Reveal>
-
 
           <div className="mt-12 grid gap-5 md:grid-cols-3">
 
             {gallery.map((item, index) => (
 
-              <Reveal
-                key={item.image}
-                delay={`${index * 0.12}s`}
-              >
+              <div key={item.image}>
 
                 <div
                   className={`group relative overflow-hidden rounded-2xl ${
@@ -1097,7 +1022,7 @@ export default function AboutPage() {
 
                 </div>
 
-              </Reveal>
+              </div>
 
             ))}
 
@@ -1117,8 +1042,6 @@ export default function AboutPage() {
         <div className="pointer-events-none absolute -right-32 -top-32 h-72 w-72 rounded-full bg-brand-gold/10 blur-3xl" />
 
         <div className="relative mx-auto max-w-7xl">
-
-          <Reveal>
 
             <div className="flex flex-col items-start justify-between gap-8 lg:flex-row lg:items-center">
 
@@ -1158,8 +1081,6 @@ export default function AboutPage() {
               </div>
 
             </div>
-
-          </Reveal>
 
         </div>
 
