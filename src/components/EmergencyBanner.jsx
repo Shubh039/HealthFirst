@@ -17,7 +17,7 @@ export default function EmergencyBanner() {
             support and trauma care.
           </p>
           <Link
-            href="#"
+            href="specialities/emergency-care"
             className="mt-2 w-fit rounded-full border border-white px-5 py-2 text-sm font-medium text-white hover:bg-white hover:text-brand-red"
           >
             Learn More →
