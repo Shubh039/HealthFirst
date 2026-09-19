@@ -11,7 +11,6 @@ import {
   Search,
   Stethoscope,
 } from "lucide-react";
-import Reveal from "@/components/Reveal";
 
 const doctors = [
   {

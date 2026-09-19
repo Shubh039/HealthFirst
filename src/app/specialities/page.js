@@ -11,6 +11,7 @@ export default function SpecialitiesPage() {
   return (
     <>
       <Header />
+      <SpecialitiesHero />
       <SpecialitiesGrid />
       <Footer />
     </>

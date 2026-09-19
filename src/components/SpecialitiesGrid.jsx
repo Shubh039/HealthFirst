@@ -46,12 +46,12 @@ const specialities = [
     image: "/images/specialities/pediatrics.png",
   },
   {
-      slug: "neonatology",
-      icon: HeartPulse,
-      title: "Neonatology",
-      text: "Specialised care for newborns, including premature and critically ill infants, backed by our Level 3 NICU.",
-      image: "/images/specialities/neonatology.png",
-    },
+    slug: "neonatology",
+    icon: HeartPulse,
+    title: "Neonatology",
+    text: "Specialised care for newborns, including premature and critically ill infants, backed by our Level 3 NICU.",
+    image: "/images/specialities/neonatology.png",
+  },
   {
     slug: "general-surgery",
     icon: Scissors,
@@ -94,10 +94,11 @@ const specialities = [
     text: "Compassionate fertility care and assisted reproduction support for couples building their families.",
     image: "/images/specialities/ivf-infertility.png",
   },
-  { slug: "anesthesia-critical-care", 
-    icon: Syringe, 
-    title: "Anesthesia & Critical Care", 
-    text: "Expert anesthesia and critical care for safe, precise, and compassionate patient care.", 
+  {
+    slug: "anesthesia-critical-care",
+    icon: Syringe,
+    title: "Anesthesia & Critical Care",
+    text: "Expert anesthesia and critical care for safe, precise, and compassionate patient care.",
     image: "/images/specialities/anesthesia.png",
   },
 ];
@@ -112,170 +113,116 @@ export default function SpecialitiesGrid() {
     <section className="relative overflow-hidden bg-brand-bg px-6 py-20 sm:py-24 lg:px-8">
       {/* Background decoration */}
       <div className="pointer-events-none absolute -right-40 top-20 h-96 w-96 rounded-full bg-brand-gold/5 blur-3xl" />
+
       <div className="pointer-events-none absolute -left-40 bottom-20 h-96 w-96 rounded-full bg-brand-teal/5 blur-3xl" />
 
+      {/* Main container */}
       <div className="relative mx-auto max-w-7xl">
 
         {/* =========================================================
-        SECTION HEADER
+            EMERGENCY / CRITICAL CARE
         ========================================================= */}
 
-        <div className="relative flex flex-col justify-between gap-8 lg:flex-row lg:items-end">
+        <Link
+          href="/specialities/emergency-care"
+          className="group relative block overflow-hidden rounded-[2rem] bg-brand-red shadow-[0_20px_60px_rgba(230,57,70,0.16)] transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_28px_75px_rgba(230,57,70,0.22)]"
+        >
+          <div className="grid lg:grid-cols-[1fr_0.9fr]">
 
-          {/* Left — Heading */}
-          <div className="max-w-3xl">
+            {/* =====================================================
+                CONTENT
+            ===================================================== */}
 
-            {/* Eyebrow */}
-            <div className="inline-flex items-center gap-2 rounded-full border border-brand-teal/10 bg-white px-3.5 py-2 shadow-sm">
-              <span className="h-1.5 w-1.5 rounded-full bg-brand-teal" />
+            <div className="relative flex min-h-[320px] flex-col justify-center overflow-hidden p-8 sm:p-10 lg:p-12">
 
-              <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-brand-teal">
-                Our Specialities
-              </p>
-            </div>
+              {/* Decorative circles */}
+              <div className="pointer-events-none absolute -right-24 -top-24 h-72 w-72 rounded-full border border-white/10" />
 
-            {/* Heading */}
-            <h1 className="mt-5 text-3xl font-bold leading-[1.08] tracking-[-0.02em] text-brand-navy sm:text-4xl lg:text-5xl">
-              Comprehensive care.
-              <br />
-              <span className="text-brand-navy/55">
-                One trusted destination.
-              </span>
-            </h1>
+              <div className="pointer-events-none absolute -right-10 -top-10 h-44 w-44 rounded-full border border-white/10" />
 
-            {/* Accent */}
-            <div className="mt-5 flex items-center gap-2">
-              <span className="h-1 w-10 rounded-full bg-brand-gold" />
-              <span className="h-1 w-2 rounded-full bg-brand-gold/30" />
-            </div>
+              <div className="relative z-10">
 
-            {/* Description */}
-            <p className="mt-5 max-w-2xl text-base leading-7 text-gray-600">
-              From everyday healthcare to specialised treatment, our
-              multidisciplinary teams work together to provide thoughtful,
-              patient-focused care under one roof.
-            </p>
+                {/* Eyebrow */}
+                <div className="flex items-center gap-3">
+                  <span className="h-px w-8 bg-white/70" />
 
-          </div>
-
-
-          {/* Right — CTA */}
-          <Link
-            href="/appointment"
-            className="group inline-flex w-fit shrink-0 items-center gap-3 rounded-full border border-brand-navy/10 bg-white py-2 pl-5 pr-2 text-sm font-semibold text-brand-navy shadow-[0_8px_25px_rgba(15,23,42,0.05)] transition-all duration-300 hover:-translate-y-0.5 hover:border-brand-gold/40 hover:shadow-[0_12px_30px_rgba(15,23,42,0.09)]"
-          >
-            <span>Book an Appointment</span>
-
-            <span className="flex h-9 w-9 items-center justify-center rounded-full bg-brand-navy text-white transition-all duration-300 group-hover:bg-brand-gold group-hover:text-brand-navy">
-              <ArrowUpRight
-                className="h-4 w-4 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
-                strokeWidth={2}
-              />
-            </span>
-          </Link>
-
-        </div>
-
-
-      {/* =========================================================
-          EMERGENCY / CRITICAL CARE
-      ========================================================= */}
-
-      <Link
-        href="/specialities/emergency-care"
-        className="group relative mt-14 block overflow-hidden rounded-[2rem] bg-brand-red shadow-[0_20px_60px_rgba(230,57,70,0.16)] transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_28px_75px_rgba(230,57,70,0.22)]"
-      >
-        <div className="grid lg:grid-cols-[1fr_0.9fr]">
-
-          {/* =====================================================
-              CONTENT
-          ===================================================== */}
-
-          <div className="relative flex min-h-[320px] flex-col justify-center overflow-hidden p-8 sm:p-10 lg:p-12">
-
-            {/* Subtle background detail */}
-            <div className="pointer-events-none absolute -right-24 -top-24 h-72 w-72 rounded-full border border-white/10" />
-            <div className="pointer-events-none absolute -right-10 -top-10 h-44 w-44 rounded-full border border-white/10" />
-
-            <div className="relative z-10">
-
-              {/* Eyebrow */}
-              <div className="flex items-center gap-3">
-                <span className="h-px w-8 bg-white/70" />
-
-                <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-white/80">
-                  24×7 Emergency & Critical Care
-                </span>
-              </div>
-
-              {/* Title + Icon */}
-              <div className="mt-5 flex items-start gap-5">
-
-                <span className="hidden h-14 w-14 shrink-0 items-center justify-center rounded-2xl border border-white/20 bg-white/10 sm:flex">
-                  <Ambulance
-                    className="h-7 w-7 text-white"
-                    strokeWidth={1.6}
-                  />
-                </span>
-
-                <div>
-
-                  <p className="mt-3 max-w-xl text-sm leading-7 text-white/80 sm:text-base">
-                    Expert anesthesia and critical care supported by advanced
-                    life support, continuous monitoring and a dedicated
-                    clinical team available around the clock.
-                  </p>
+                  <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-white/80">
+                    24×7 Emergency & Critical Care
+                  </span>
                 </div>
 
+                {/* Content */}
+                <div className="mt-5 flex items-start gap-5">
+
+                  {/* Icon */}
+                  <span className="hidden h-14 w-14 shrink-0 items-center justify-center rounded-2xl border border-white/20 bg-white/10 sm:flex">
+                    <Ambulance
+                      className="h-7 w-7 text-white"
+                      strokeWidth={1.6}
+                    />
+                  </span>
+
+                  <div>
+                    <h2 className="text-2xl font-bold leading-tight text-white sm:text-3xl">
+                      Immediate care when it matters most.
+                    </h2>
+
+                    <p className="mt-3 max-w-xl text-sm leading-7 text-white/80 sm:text-base">
+                      Expert emergency and critical care supported by advanced
+                      life support, continuous monitoring and a dedicated
+                      clinical team available around the clock.
+                    </p>
+                  </div>
+
+                </div>
+
+                {/* CTA */}
+                <span className="mt-7 inline-flex items-center gap-2 text-sm font-semibold text-white">
+                  Explore Critical Care
+
+                  <span className="flex h-8 w-8 items-center justify-center rounded-full bg-white text-brand-red transition-all duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5">
+                    <ArrowUpRight
+                      className="h-4 w-4"
+                      strokeWidth={2}
+                    />
+                  </span>
+                </span>
+
+              </div>
+            </div>
+
+            {/* =====================================================
+                IMAGE
+            ===================================================== */}
+
+            <div className="relative min-h-[260px] overflow-hidden lg:min-h-[320px]">
+
+              <img
+                src="/images/specialities/critical-care.png"
+                alt="Advanced critical care and ICU facilities"
+                className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.035]"
+              />
+
+              {/* Red image blend */}
+              <div className="absolute inset-0 bg-gradient-to-r from-brand-red via-brand-red/35 to-transparent lg:from-brand-red/80 lg:via-brand-red/10 lg:to-transparent" />
+
+              {/* Image badge */}
+              <div className="absolute bottom-6 right-6 rounded-2xl border border-white/20 bg-brand-red/80 px-4 py-3 shadow-lg backdrop-blur-md">
+
+                <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-white/70">
+                  Always Ready
+                </p>
+
+                <p className="mt-1 text-sm font-semibold text-white">
+                  ICU • Emergency • Critical Care
+                </p>
+
               </div>
 
-              {/* CTA */}
-              <span className="mt-7 inline-flex items-center gap-2 text-sm font-semibold text-white">
-                Explore Critical Care
-
-                <span className="flex h-8 w-8 items-center justify-center rounded-full bg-white text-brand-red transition-all duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5">
-                  <ArrowUpRight
-                    className="h-4 w-4"
-                    strokeWidth={2}
-                  />
-                </span>
-              </span>
-
-            </div>
-          </div>
-
-
-          {/* =====================================================
-              IMAGE
-          ===================================================== */}
-
-          <div className="relative min-h-[260px] overflow-hidden lg:min-h-[320px]">
-
-            <img
-              src="/images/specialities/critical-care.png"
-              alt="Advanced critical care and ICU facilities"
-              className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.035]"
-            />
-
-            {/* Red image blend */}
-            <div className="absolute inset-0 bg-gradient-to-r from-brand-red via-brand-red/35 to-transparent lg:from-brand-red/80 lg:via-brand-red/10 lg:to-transparent" />
-
-            {/* Small image badge */}
-            <div className="absolute bottom-6 right-6 rounded-2xl border border-white/20 bg-brand-red/80 px-4 py-3 shadow-lg backdrop-blur-md">
-              <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-white/70">
-                Always Ready
-              </p>
-
-              <p className="mt-1 text-sm font-semibold text-white">
-                ICU • Emergency • Critical Care
-              </p>
             </div>
 
           </div>
-
-        </div>
-      </Link>
-
+        </Link>
 
         {/* =========================================================
             SPECIALITY GRID
@@ -320,7 +267,6 @@ export default function SpecialitiesGrid() {
 
                 </div>
 
-
                 {/* =================================================
                     CARD CONTENT
                 ================================================= */}
@@ -344,11 +290,9 @@ export default function SpecialitiesGrid() {
 
                   </div>
 
-
                   <p className="mt-3 flex-1 text-sm leading-6 text-gray-600">
                     {text}
                   </p>
-
 
                   <div className="mt-6 flex items-center justify-between border-t border-brand-navy/10 pt-4">
 
@@ -369,7 +313,6 @@ export default function SpecialitiesGrid() {
 
         </div>
 
-
         {/* =========================================================
             BOTTOM NOTE
         ========================================================= */}
@@ -379,10 +322,12 @@ export default function SpecialitiesGrid() {
           <div className="flex items-center gap-3">
 
             <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-brand-bg">
+
               <Syringe
                 className="h-4 w-4 text-brand-teal"
                 strokeWidth={1.7}
               />
+
             </span>
 
             <p className="text-sm text-gray-600">
@@ -400,6 +345,7 @@ export default function SpecialitiesGrid() {
             <ArrowUpRight
               className="h-4 w-4 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
             />
+
           </Link>
 
         </div>
