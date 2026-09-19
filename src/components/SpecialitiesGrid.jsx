@@ -182,7 +182,7 @@ export default function SpecialitiesGrid() {
       ========================================================= */}
 
       <Link
-        href="/specialities/anesthesia-critical-care"
+        href="/specialities/emergency-care"
         className="group relative mt-14 block overflow-hidden rounded-[2rem] bg-brand-red shadow-[0_20px_60px_rgba(230,57,70,0.16)] transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_28px_75px_rgba(230,57,70,0.22)]"
       >
         <div className="grid lg:grid-cols-[1fr_0.9fr]">

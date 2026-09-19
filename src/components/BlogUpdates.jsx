@@ -1,45 +1,97 @@
+import Image from "next/image";
 import Link from "next/link";
-
-const posts = [
-  { tag: "Health Education", title: "How to Keep Your Heart Healthy", date: "12 April 2025", image: "/images/blog-1.jpg" },
-  { tag: "Hospital Updates", title: "New Orthopedic Wing Now Open", date: "10 April 2025", image: "/images/blog-2.jpg" },
-  { tag: "Doctor Articles", title: "Understanding Diabetes: Symptoms and Prevention", date: "5 April 2025", image: "/images/blog-3.jpg" },
-  { tag: "Community Camps", title: "Free Health Check-up Camp at Khajoori Khas", date: "28 March 2025", image: "/images/blog-4.jpg" },
-];
+import { ArrowRight } from "lucide-react";
+import { blogs } from "@/data/blogs";
 
 export default function BlogUpdates() {
+  const featuredBlogs = blogs.slice(0, 3);
+
   return (
-    <section className="bg-brand-bg px-6 py-20">
+    <section className="bg-brand-bg px-6 py-20 lg:py-24">
       <div className="mx-auto max-w-7xl">
-        <div className="flex flex-wrap items-end justify-between gap-4">
-          <div>
-            <p className="text-sm font-semibold uppercase tracking-wide text-brand-teal">
-              Latest Updates
+
+        {/* Heading */}
+        <div className="flex flex-col gap-5 sm:flex-row sm:items-end sm:justify-between">
+          <div className="max-w-2xl">
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-brand-teal">
+              Health & Wellness
             </p>
-            <h2 className="mt-2 text-3xl font-bold text-brand-navy">
-              Health Tips, Hospital Updates & Community Initiatives
+
+            <h2 className="mt-3 text-3xl font-bold tracking-tight text-brand-navy sm:text-4xl">
+              Knowledge that helps you care for your health.
             </h2>
-            <p className="mt-2 text-gray-500">Stay informed. Stay healthy.</p>
+
+            <p className="mt-4 text-base leading-7 text-gray-600">
+              Helpful health information, expert insights and updates from
+              HealthFirst Hospital.
+            </p>
           </div>
-          <Link href="#" className="text-sm font-medium text-brand-teal hover:underline">
-            View All Blogs & Camps →
+
+          <Link
+            href="/blogs"
+            className="group inline-flex items-center gap-2 text-sm font-semibold text-brand-navy"
+          >
+            View All Articles
+            <ArrowRight
+              className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"
+            />
           </Link>
         </div>
 
-        <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {posts.map((post) => (
-            <div key={post.title} className="overflow-hidden rounded-xl bg-white shadow-sm">
-              {/* TODO: replace with real blog images */}
-              <img src={post.image} alt={post.title} className="h-40 w-full object-cover" />
-              <div className="p-4">
-                <p className="text-xs font-medium uppercase text-brand-teal">{post.tag}</p>
-                <p className="mt-1 text-sm font-semibold text-brand-navy">{post.title}</p>
-                <p className="mt-1 text-xs text-gray-400">{post.date}</p>
-                <Link href="#" className="mt-2 inline-block text-xs font-medium text-brand-teal hover:underline">
-                  Read More →
+        {/* Blog cards */}
+        <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-3">
+          {featuredBlogs.map((post) => (
+            <article
+              key={post.slug}
+              className="group overflow-hidden rounded-2xl border border-brand-navy/5 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+            >
+              {/* Image */}
+              <Link href={`/blogs/${post.slug}`}>
+                <div className="relative h-56 overflow-hidden">
+                  <Image
+                    src={post.image}
+                    alt={post.title}
+                    fill
+                    className="object-cover transition duration-500 group-hover:scale-105"
+                  />
+
+                  <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/40 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+                </div>
+              </Link>
+
+              {/* Content */}
+              <div className="p-6">
+                <div className="flex items-center gap-2 text-xs font-medium text-brand-teal">
+                  <span>{post.category}</span>
+                  <span className="text-gray-300">•</span>
+                  <span>{post.readTime}</span>
+                </div>
+
+                <Link href={`/blogs/${post.slug}`}>
+                  <h3 className="mt-3 text-xl font-semibold leading-snug text-brand-navy transition-colors group-hover:text-brand-teal">
+                    {post.title}
+                  </h3>
                 </Link>
+
+                <p className="mt-3 line-clamp-3 text-sm leading-6 text-gray-500">
+                  {post.excerpt}
+                </p>
+
+                <div className="mt-5 flex items-center justify-between border-t border-gray-100 pt-4">
+                  <span className="text-xs text-gray-400">
+                    {post.date}
+                  </span>
+
+                  <Link
+                    href={`/blogs/${post.slug}`}
+                    className="inline-flex items-center gap-1 text-sm font-semibold text-brand-navy"
+                  >
+                    Read Article
+                    <ArrowRight className="h-4 w-4" />
+                  </Link>
+                </div>
               </div>
-            </div>
+            </article>
           ))}
         </div>
       </div>

@@ -12,7 +12,7 @@ const navLinks = [
   { label: "Specialities", href: "/specialities" },
   { label: "Services & Facilities", href: "#" },
   { label: "Doctors", href: "/doctors" },
-  { label: "Blogs", href: "#" },
+  { label: "Blogs", href: "/blogs" },
 ];
 
 export default function Header() {
