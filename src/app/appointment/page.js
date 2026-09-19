@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import AppointmentHero from "@/components/AppointmentHero";
@@ -12,7 +13,9 @@ export default function AppointmentPage() {
     <>
       <Header />
       <AppointmentHero />
-      <AppointmentForm />
+      <Suspense fallback={null}>
+        <AppointmentForm />
+      </Suspense>
       <Footer />
     </>
   );
