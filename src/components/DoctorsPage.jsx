@@ -15,24 +15,6 @@ import Reveal from "@/components/Reveal";
 
 const doctors = [
   {
-    name: "Dr. Amit Singh",
-    category: "Surgery",
-    qualification:
-      "MBBS, MS (General Surgery) | CMD, Rama Multi-Speciality Hospital & Trauma Centre",
-    role: "Chairman & Managing Director (CMD), Senior Consultant Surgeon",
-    specialty: "General, Laparoscopic & Endourology Surgery",
-    experience: "10,000+ Successful Surgeries",
-    description:
-      "Distinguished laparoscopic and endourology surgeon with a record of clinical excellence across 10,000+ successful operations. Pioneer in minimally invasive urological and general surgical interventions.",
-    expertise: [
-      "Advanced Laparoscopic Surgeries",
-      "Endourology & Stone Management",
-      "Trauma & Critical Surgical Care",
-    ],
-    photo: "/images/doctors/Doc-Amit-Singh.jpeg",
-  },
-
-  {
     name: "Dr. Rohit Bhargava",
     category: "Radiology",
     qualification:

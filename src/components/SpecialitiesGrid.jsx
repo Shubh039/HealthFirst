@@ -117,29 +117,39 @@ export default function SpecialitiesGrid() {
       <div className="relative mx-auto max-w-7xl">
 
         {/* =========================================================
-            SECTION HEADER
+        SECTION HEADER
         ========================================================= */}
 
-        <div className="flex flex-col justify-between gap-7 lg:flex-row lg:items-end">
+        <div className="relative flex flex-col justify-between gap-8 lg:flex-row lg:items-end">
 
+          {/* Left — Heading */}
           <div className="max-w-3xl">
 
-            <div className="flex items-center gap-3">
-              <span className="h-px w-9 bg-brand-gold" />
+            {/* Eyebrow */}
+            <div className="inline-flex items-center gap-2 rounded-full border border-brand-teal/10 bg-white px-3.5 py-2 shadow-sm">
+              <span className="h-1.5 w-1.5 rounded-full bg-brand-teal" />
 
-              <p className="text-xs font-bold uppercase tracking-[0.2em] text-brand-teal">
+              <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-brand-teal">
                 Our Specialities
               </p>
             </div>
 
-            <h1 className="mt-5 text-3xl font-bold leading-[1.12] text-brand-navy sm:text-4xl lg:text-5xl">
+            {/* Heading */}
+            <h1 className="mt-5 text-3xl font-bold leading-[1.08] tracking-[-0.02em] text-brand-navy sm:text-4xl lg:text-5xl">
               Comprehensive care.
               <br />
-              <span className="text-brand-navy/65">
+              <span className="text-brand-navy/55">
                 One trusted destination.
               </span>
             </h1>
 
+            {/* Accent */}
+            <div className="mt-5 flex items-center gap-2">
+              <span className="h-1 w-10 rounded-full bg-brand-gold" />
+              <span className="h-1 w-2 rounded-full bg-brand-gold/30" />
+            </div>
+
+            {/* Description */}
             <p className="mt-5 max-w-2xl text-base leading-7 text-gray-600">
               From everyday healthcare to specialised treatment, our
               multidisciplinary teams work together to provide thoughtful,
@@ -148,15 +158,17 @@ export default function SpecialitiesGrid() {
 
           </div>
 
+
+          {/* Right — CTA */}
           <Link
             href="/appointment"
-            className="group inline-flex w-fit shrink-0 items-center gap-2 rounded-full border border-brand-navy/10 bg-white px-5 py-3 text-sm font-semibold text-brand-navy shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-brand-gold/40 hover:shadow-md"
+            className="group inline-flex w-fit shrink-0 items-center gap-3 rounded-full border border-brand-navy/10 bg-white py-2 pl-5 pr-2 text-sm font-semibold text-brand-navy shadow-[0_8px_25px_rgba(15,23,42,0.05)] transition-all duration-300 hover:-translate-y-0.5 hover:border-brand-gold/40 hover:shadow-[0_12px_30px_rgba(15,23,42,0.09)]"
           >
             <span>Book an Appointment</span>
 
-            <span className="flex h-7 w-7 items-center justify-center rounded-full bg-brand-bg transition-colors duration-300 group-hover:bg-brand-gold">
+            <span className="flex h-9 w-9 items-center justify-center rounded-full bg-brand-navy text-white transition-all duration-300 group-hover:bg-brand-gold group-hover:text-brand-navy">
               <ArrowUpRight
-                className="h-3.5 w-3.5 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+                className="h-4 w-4 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
                 strokeWidth={2}
               />
             </span>
@@ -207,9 +219,6 @@ export default function SpecialitiesGrid() {
                 </span>
 
                 <div>
-                  <h2 className="text-2xl font-bold leading-tight text-white sm:text-3xl">
-                    Anesthesia & Critical Care
-                  </h2>
 
                   <p className="mt-3 max-w-xl text-sm leading-7 text-white/80 sm:text-base">
                     Expert anesthesia and critical care supported by advanced
@@ -243,7 +252,7 @@ export default function SpecialitiesGrid() {
           <div className="relative min-h-[260px] overflow-hidden lg:min-h-[320px]">
 
             <img
-              src="/images/specialities/critical-care.jpg"
+              src="/images/specialities/critical-care.png"
               alt="Advanced critical care and ICU facilities"
               className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.035]"
             />

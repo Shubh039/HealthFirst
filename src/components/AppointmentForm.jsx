@@ -51,6 +51,14 @@ const initialState = {
   company: "", // honeypot field — real visitors never see or fill this
 };
 
+function getTodayString() {
+  const today = new Date();
+  const year = today.getFullYear();
+  const month = String(today.getMonth() + 1).padStart(2, "0");
+  const day = String(today.getDate()).padStart(2, "0");
+  return `${year}-${month}-${day}`;
+}
+
 export default function AppointmentForm() {
   const [formData, setFormData] = useState(initialState);
   const [status, setStatus] = useState("idle"); // idle | loading | success | error
@@ -173,7 +181,7 @@ export default function AppointmentForm() {
                 </p>
 
                 <p className="text-xs text-white/70">
-                  Mon – Sun | 8:00 AM – 10:00 PM
+                  24 x 7 — We are always here for you!
                 </p>
               </div>
             </div>
@@ -281,6 +289,7 @@ export default function AppointmentForm() {
                     type="date"
                     name="date"
                     value={formData.date}
+                    min={getTodayString()}
                     onChange={handleChange}
                     className="rounded-md border border-gray-200 px-3 py-2 text-sm text-gray-500 outline-none transition-all duration-200 focus:border-brand-gold/50 focus:ring-2 focus:ring-brand-gold/10"
                   />

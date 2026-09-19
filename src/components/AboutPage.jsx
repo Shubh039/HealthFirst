@@ -185,7 +185,7 @@ const leadership = [
     {
     name: "Dr. Amit Singh",
     role: "CMD, Rama Multi-Speciality Hospital & Trauma Centre",
-    image: "/images/about/leadership/Doc-Amit-Singh.jpeg",
+    image: "/images/about/leadership/Doc-Amit-Singh.png",
     description:
       "Laparoscopic and Endourology Surgeon with 10,000+ successful procedures and a record of clinical excellence.",
   },
