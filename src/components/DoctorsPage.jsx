@@ -48,7 +48,7 @@ const doctors = [
       "Controlled Ovarian Stimulation",
       "High-Risk Pregnancy Care",
     ],
-    photo: "/images/doctors/Doc-Neha-Mehta.jpeg",
+    photo: "/images/doctors/Doc-Neha-mehta.jpeg",
   },
 
   {
