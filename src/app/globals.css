@@ -78,12 +78,25 @@ html {
    Hero Typing Animation
    ================================ */
 
-@keyframes type-reveal {
+/* "ch" is the width of one character at the current font size — so
+   this scales with the text length itself, not the container width.
+   That's what fixes the clipped letters on narrow/mobile screens. */
+
+@keyframes type-reveal-line-1 {
   from {
     width: 0;
   }
   to {
-    width: 80%;
+    width: 14ch;
+  }
+}
+
+@keyframes type-reveal-line-2 {
+  from {
+    width: 0;
+  }
+  to {
+    width: 13ch;
   }
 }
 
@@ -112,8 +125,9 @@ html {
    to line 2 with no overlap. */
 .typing-line-1 {
   animation:
-    type-reveal 1.6s steps(14, end) 0.4s forwards,
-    cursor-on 1.85s steps(1, end) 0.4s;}
+    type-reveal-line-1 1.6s steps(14, end) 0.4s forwards,
+    cursor-on 1.85s steps(1, end) 0.4s;
+}
 
 /* Line 2: "Every Moment." — 13 characters
    Starts the instant line 1's cursor is gone (2.23s), types until
@@ -121,7 +135,7 @@ html {
    just before the description fades in. */
 .typing-line-2 {
   animation:
-    type-reveal 1.6s steps(13, end) 2.23s forwards,
+    type-reveal-line-2 1.6s steps(13, end) 2.23s forwards,
     cursor-on 1.85s steps(1, end) 2.23s;
 }
 
@@ -241,4 +255,3 @@ html {
 .animate-support-breathe {
   animation: support-breathe 2.8s ease-in-out infinite;
 }
-
