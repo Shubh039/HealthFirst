@@ -10,7 +10,6 @@ const navLinks = [
   { label: "Home", href: "/" },
   { label: "About Us", href: "/about" },
   { label: "Specialities", href: "/specialities" },
-  { label: "Services & Facilities", href: "#" },
   { label: "Doctors", href: "/doctors" },
   { label: "Blogs", href: "/blogs" },
 ];
@@ -23,7 +22,7 @@ export default function Header() {
       <div className="mx-auto flex h-[76px] max-w-7xl items-center justify-between px-5 sm:px-6 lg:px-8">
 
         {/* Logo */}
-        <Link href="/" className="group flex items-center">
+        <Link href="/" className="group flex items-left">
           <div className="relative h-[80px] w-[175px] shrink-0">
             <Image
               src={siteConfig.logo}

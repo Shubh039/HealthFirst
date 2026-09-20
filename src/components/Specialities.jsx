@@ -11,31 +11,37 @@ import {
 
 const specialities = [
   {
+    slug: "internal-medicine",
     icon: Stethoscope,
     label: "Internal Medicine",
     image: "/images/specialities/internal-medicine.png",
   },
   {
+    slug: "obs-gynae",
     icon: Baby,
     label: "Obs & Gynae",
     image: "/images/specialities/obstetrics-gynae.png",
   },
   {
+    slug: "orthopedics",
     icon: Bone,
     label: "Orthopedics",
     image: "/images/specialities/orthopedics.png",
   },
   {
+    slug: "radiology",
     icon: Radiation ,
     label: "Radiology",
     image: "/images/specialities/radiology.png",
   },
   {
+    slug: "anesthesia-critical-care",
     icon: Syringe ,
     label: "Anesthesia & Critical Care",
     image: "/images/specialities/anesthesia.png",
   },
   {
+    slug: "general-surgery",
     icon: Scissors,
     label: "General Surgery",
     image: "/images/specialities/general-surgery.png",
@@ -91,9 +97,9 @@ export default function Specialities() {
         {/* Speciality Grid */}
         <div className="mt-14 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6">
 
-          {specialities.map(({ icon: Icon, label, image }) => (
+          {specialities.map(({slug, icon: Icon, label, image }) => (
             <Link
-              href="#"
+              href={`/specialities/${slug}`}
               key={label}
               className="group relative overflow-hidden rounded-2xl border border-brand-navy/10 bg-white shadow-[0_8px_30px_rgba(15,23,42,0.04)] transition-all duration-300 hover:-translate-y-1.5 hover:border-brand-gold/40 hover:shadow-[0_18px_45px_rgba(11,36,71,0.12)]"
             >

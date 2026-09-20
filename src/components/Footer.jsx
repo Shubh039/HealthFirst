@@ -163,15 +163,15 @@ export default function Footer() {
 
                 <div>
 
-                  <p className="text-sm leading-6 text-white/55">
-                    Pillar No. 102, Metro Station Gate,
-                    <br />
-                    F1, 2, Wazirabad Road,
-                    <br />
-                    Near Bhajanpura, Khazoori Khas,
-                    <br />
-                    Delhi – 110094
-                  </p>
+                    <p className="mt-1 text-sm leading-6 text-white/45">
+                      F1, Wazirabad rd, Khajuri Khas,  
+                      <br />
+                      near Bhajanpura Metro station 
+                      <br />
+                      Gate no. 2, Pillar no. 102,
+                      <br />
+                      Delhi – 110094
+                    </p>
 
                   <a
                     href={googleMapsUrl}
@@ -353,11 +353,11 @@ export default function Footer() {
                     </p>
 
                     <p className="mt-1 text-sm leading-6 text-white/45">
-                      Pillar No. 102, Metro Station Gate,
+                      F1, Wazirabad rd, Khajuri Khas,  
                       <br />
-                      F1, 2, Wazirabad Road,
+                      near Bhajanpura Metro station 
                       <br />
-                      Near Bhajanpura, Khazoori Khas,
+                      Gate no. 2, Pillar no. 102,
                       <br />
                       Delhi – 110094
                     </p>
@@ -443,7 +443,7 @@ export default function Footer() {
             </a>
 
             <a
-              href="#"
+              href="https://www.facebook.com/share/1BCcdWdrwb/"
               aria-label="Facebook"
               className="flex h-9 w-9 items-center justify-center rounded-full border border-white/10 bg-white/[0.03] text-white/45 transition-all duration-300 hover:-translate-y-1 hover:border-brand-gold/30 hover:bg-brand-gold/10 hover:text-brand-gold"
             >

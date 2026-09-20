@@ -6,7 +6,6 @@ const doctors = [
     name: "Dr. Dalimi Mushahary",
     qualification: "MBBS MS-DNB",
     specialty: "Obstetrics and Gynecology",
-    experience: "8+ Years",
     opd: "Mon - Sat",
     timing: "9:00 AM - 5:00 PM",
     photo: "/images/doctors/Doc-Dalimi.jpeg",
@@ -15,7 +14,6 @@ const doctors = [
     name: "Dr. Akshay Yadav",
     qualification: "MBBS MD",
     specialty: "Anesthesia and Critical Care",
-    experience: "6+ Years",
     opd: "Mon - Sat",
     timing: "9:00 AM - 5:00 PM",
     photo: "/images/doctors/Doc-Akshay-yadav.jpeg",
@@ -24,8 +22,7 @@ const doctors = [
     name: "Dr. Saurabh Gadi",
     qualification: "MBBS MS",
     specialty: "Orthopedics",
-    experience: "10+ Years",
-    opd: "Tue - Sun",
+    opd: "Mon - Sat",
     timing: "5:00 PM - 7:00 PM",
     photo: "/images/doctors/Doc-Saurabh-Gadi.jpeg",
   },
@@ -33,7 +30,6 @@ const doctors = [
     name: "Dr. Rohit Bhargava",
     qualification: "MBBS MD",
     specialty: "Radiology",
-    experience: "20+ Years",
     opd: "Mon - Sat",
     timing: "9:00 AM - 5:00 PM",
     photo: "/images/doctors/Doc-Rohit-Bhargawa.jpeg",
@@ -126,15 +122,6 @@ export default function Doctors() {
 
                 {/* Experience / OPD */}
                 <div className="mt-5 grid grid-cols-2 gap-3 border-t border-brand-navy/10 pt-4">
-                  <div>
-                    <p className="text-[10px] font-bold uppercase tracking-[0.12em] text-gray-400">
-                      Experience
-                    </p>
-
-                    <p className="mt-1 text-sm font-semibold text-brand-navy">
-                      {doc.experience}
-                    </p>
-                  </div>
 
                   <div>
                     <p className="text-[10px] font-bold uppercase tracking-[0.12em] text-gray-400">

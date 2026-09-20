@@ -337,7 +337,7 @@ export default function SpecialitiesGrid() {
           </div>
 
           <Link
-            href="/contact"
+            href="/doctors"
             className="group inline-flex w-fit items-center gap-2 text-sm font-semibold text-brand-navy"
           >
             Talk to our team
