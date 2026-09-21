@@ -47,7 +47,7 @@ const doctors = [
       "Controlled Ovarian Stimulation",
       "High-Risk Pregnancy Care",
     ],
-    photo: "/images/doctors/Doc-Neha-mehta.jpeg",
+    photo: "/images/doctors/Doc-Neha-mehta-2.jpeg",
   },
 
   {
@@ -102,7 +102,7 @@ const doctors = [
     "Bariatric & Robotic Surgery",
     "General & Advanced Surgery",
   ],
-  photo: "/images/doctors/Doc-Shahiq-Ahmed.jpeg",
+  photo: "/images/doctors/Doc-Shahiq-Ahmed-1.jpeg",
 },
 
   {

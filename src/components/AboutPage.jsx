@@ -178,7 +178,7 @@ const leadership = [
   {
     name: "Mr. Avinash Singh",
     role: "Founder and Managing Director, Guery Pharma",
-    image: "/images/about/leadership/Avinash-Singh.jpeg",
+    image: "/images/about/leadership/Avinash-Singh-1.jpeg",
     description:
       "Accomplished pharma entrepreneur focused on quality, innovation and accessible healthcare solutions.",
   },
@@ -192,7 +192,7 @@ const leadership = [
     {
     name: "Dr. Rohit Bhargawa",
     role: "Senior Consultant & Head of Radiology",
-    image: "/images/about/leadership/Doc-Rohit-Bhargawa.png",
+    image: "/images/about/leadership/Doc-Rohit-Bhargawa-1.png",
     description:
       "Specialist in 1.5 Tesla MRI, spiral CT scans, 3D/4D ultrasound, Color Doppler, Mammography, and image-guided interventional procedures (USG & CT guided).",
   },
