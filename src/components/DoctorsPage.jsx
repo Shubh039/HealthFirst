@@ -65,7 +65,7 @@ const doctors = [
       "Emergency Obstetric Care",
       "Gynaecological Surgeries",
     ],
-    photo: "/images/doctors/Doc-Dalimi.jpeg",
+    photo: "/images/doctors/Doc-Dalimiii.jpeg",
   },
 
   {
@@ -83,7 +83,7 @@ const doctors = [
       "Trauma & Critical ICU Care",
       "Continuous Renal Therapy (CRRT)",
     ],
-    photo: "/images/doctors/Doc-Akshay-yadav.jpeg",
+    photo: "/images/doctors/Doc-Akshay-yadavvv.jpeg",
   },
 
 {

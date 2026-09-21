@@ -8,7 +8,7 @@ const doctors = [
     specialty: "Obstetrics and Gynecology",
     opd: "Mon - Sat",
     timing: "9:00 AM - 5:00 PM",
-    photo: "/images/doctors/Doc-Dalimi.jpeg",
+    photo: "/images/doctors/Doc-Dalimiii.jpeg",
   },
   {
     name: "Dr. Akshay Yadav",
@@ -16,7 +16,7 @@ const doctors = [
     specialty: "Anesthesia and Critical Care",
     opd: "Mon - Sat",
     timing: "9:00 AM - 5:00 PM",
-    photo: "/images/doctors/Doc-Akshay-yadav.jpeg",
+    photo: "/images/doctors/Doc-Akshay-yadavvv.jpeg",
   },
   {
     name: "Dr. Saurabh Gadi",

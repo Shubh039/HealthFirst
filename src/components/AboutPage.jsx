@@ -287,46 +287,37 @@ export default function AboutPage() {
 
             </div>
 
-
             {/* HERO IMAGE */}
+            <div className="relative w-full">
 
-              <div className="relative">
+              <div className="group relative w-full overflow-hidden rounded-[2rem] shadow-[0_25px_70px_rgba(11,36,71,0.14)]">
 
-                <div className="group relative overflow-hidden rounded-[2rem] shadow-[0_25px_70px_rgba(11,36,71,0.14)]">
+                <Image
+                  src="/images/about/about-hospital-3.png"
+                  alt="HealthFirst Hospital"
+                  width={3300}
+                  height={2475}
+                  priority
+                  sizes="(max-width: 1024px) 100vw, 55vw"
+                  className="aspect-[4/3] h-auto w-full object-cover transition-transform duration-1000 group-hover:scale-[1.025]"
+                />
 
-                  <Image
-                    src="/images/about/exterior.jpg"
-                    alt="HealthFirst Hospital"
-                    width={1400}
-                    height={900}
-                    priority
-                    className="h-[430px] w-full object-cover transition-transform duration-1000 group-hover:scale-[1.025] sm:h-[520px]"
-                  />
+                <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/55 via-transparent to-transparent" />
 
-                  <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/55 via-transparent to-transparent" />
+                <div className="absolute bottom-6 left-6 right-6 flex items-end justify-between gap-4">
 
-                  <div className="absolute bottom-6 left-6 right-6 flex items-end justify-between gap-4">
-
-                    <div>
-                      <p className="text-xs font-semibold uppercase tracking-[0.15em] text-white/70">
-                        HealthFirst Hospital
-                      </p>
-
-                      <p className="mt-1 text-lg font-semibold text-white">
-                        Every Patient. Every Moment.
-                      </p>
-                    </div>
-
-                    <div className="hidden h-12 w-12 shrink-0 items-center justify-center rounded-full border border-white/30 bg-white/15 backdrop-blur-md sm:flex">
-                      <HeartHandshake
-                        className="h-5 w-5 text-white"
-                        strokeWidth={1.7}
-                      />
-                    </div>
-
+                  <div>
+                    <p className="mt-1 text-lg font-semibold text-white">
+                      Every Patient. Every Moment.
+                    </p>
                   </div>
 
+
                 </div>
+
+              </div>
+
+
 
 
                 {/* =================================================
@@ -334,7 +325,7 @@ export default function AboutPage() {
                     Moved from LEFT → RIGHT
                 ================================================= */}
 
-                <div className="animate-float absolute -bottom-7 right-[-18px] hidden rounded-2xl border border-white/70 bg-white/95 px-6 py-5 shadow-[0_15px_45px_rgba(15,23,42,0.14)] backdrop-blur-md sm:block">
+                {/* <div className="animate-float absolute -bottom-7 right-[-18px] hidden rounded-2xl border border-white/70 bg-white/95 px-6 py-5 shadow-[0_15px_45px_rgba(15,23,42,0.14)] backdrop-blur-md sm:block">
                   <div className="absolute left-0 top-5 h-10 w-1 rounded-r-full bg-brand-gold" />
                   <p className="text-3xl font-bold text-brand-navy">
                     IN-HOUSE
@@ -344,7 +335,7 @@ export default function AboutPage() {
                     TECH SUPPORT
                   </p>
 
-                </div>
+                </div> */}
 
               </div>
 

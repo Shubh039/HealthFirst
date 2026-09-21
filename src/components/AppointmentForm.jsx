@@ -124,7 +124,7 @@ export default function AppointmentForm() {
             CONTACT SIDEBAR
         ========================================================== */}
         <Reveal
-          className="flex flex-col justify-between gap-10 bg-brand-navy p-10 text-white"
+          className="order-2 lg:order-1 flex flex-col justify-between gap-10 bg-brand-navy p-10 text-white"
           delay="0.1s"
         >
           <div className="space-y-8">
@@ -194,7 +194,7 @@ export default function AppointmentForm() {
         {/* =========================================================
             APPOINTMENT FORM
         ========================================================== */}
-        <div className="bg-white p-10">
+        <div className="order-1 lg:order-2 bg-white p-10">
 
           {/* Form Heading */}
           <Reveal>
@@ -289,17 +289,36 @@ export default function AppointmentForm() {
                   />
 
 
-                  {/* Date */}
-                  <input
-                    required
-                    type="date"
-                    name="date"
-                    value={formData.date}
-                    min={getTodayString()}
-                    onChange={handleChange}
-                    suppressHydrationWarning
-                    className="rounded-md border border-gray-200 px-3 py-2 text-sm text-gray-500 outline-none transition-all duration-200 focus:border-brand-gold/50 focus:ring-2 focus:ring-brand-gold/10"
-                  />
+                  {/* Date
+                      - Wrapped in a relative div so we can overlay a
+                        placeholder on mobile (native date inputs show
+                        nothing when empty on Android/iOS).
+                      - block + w-full + min-w-0 stops it shrink-wrapping.
+                      - appearance-none removes the native mobile styling.
+                      - The [&::-webkit-...] classes fix iOS value alignment.
+                  */}
+                  <div className="relative">
+                    <input
+                      required
+                      type="date"
+                      name="date"
+                      value={formData.date}
+                      min={getTodayString()}
+                      onChange={handleChange}
+                      suppressHydrationWarning
+                      className="block h-[42px] w-full min-w-0 appearance-none rounded-md border border-gray-200 bg-white px-3 py-2 text-left text-sm text-gray-500 outline-none transition-all duration-200 focus:border-brand-gold/50 focus:ring-2 focus:ring-brand-gold/10 [&::-webkit-date-and-time-value]:min-h-[1.5em] [&::-webkit-date-and-time-value]:text-left [&::-webkit-calendar-picker-indicator]:cursor-pointer [&::-webkit-calendar-picker-indicator]:opacity-60"
+                    />
+
+                    {/* Mobile-only placeholder, hidden once a date is chosen */}
+                    {!formData.date && (
+                      <span
+                        aria-hidden="true"
+                        className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-sm text-gray-400 sm:hidden"
+                      >
+                        Preferred Date *
+                      </span>
+                    )}
+                  </div>
 
 
                   {/* Preferred Time */}
