@@ -25,7 +25,7 @@ export default function HomePage() {
       <PatientJourney />
       <Testimonials />
       <BlogUpdates />
-      <InsurancePanels />
+      {/* <InsurancePanels /> */}
       <Footer />
     </>
   );

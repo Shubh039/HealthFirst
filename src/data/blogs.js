@@ -51,7 +51,7 @@ export const blogs = [
 
   {
     slug: "understanding-diabetes-symptoms-and-prevention",
-    title: "Understanding Diabetes: Symptoms, Risk Factors & Prevention",
+    title: "Understanding Diabetes",
     excerpt:
       "Learn about common signs of diabetes, factors that may increase risk and the importance of regular health monitoring.",
     category: "Health Education",
@@ -103,7 +103,7 @@ export const blogs = [
     slug: "when-should-you-see-a-pediatrician",
     title: "When Should You See a Pediatrician?",
     excerpt:
-      "Children experience many common illnesses while growing up. Understanding when professional medical advice may be needed can help parents respond with confidence.",
+      "Children experience many common illnesses while growing up. Understanding when professional medical advice may be needed that can be helpful to parents.",
     category: "Mother & Child",
     speciality: "Pediatrics",
     author: "HealthFirst Hospital",
@@ -191,7 +191,7 @@ export const blogs = [
     slug: "understanding-nicu-care",
     title: "Understanding NICU Care: What Parents Should Know",
     excerpt:
-      "A NICU provides specialised care for newborns who need close monitoring or additional medical support after birth.",
+      "A NICU provides specialised care for newborns and our dedicated team ensures round-the-clock care in a safe and supportive environment.",
     category: "Newborn Care",
     speciality: "Neonatology",
     author: "HealthFirst Hospital",

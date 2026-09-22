@@ -91,7 +91,7 @@ export default function Doctors() {
                   <img
                     src={doc.photo}
                     alt={doc.name}
-                    className="h-56 w-full object-cover transition-transform duration-500 group-hover:scale-[1.02]"
+                    className="h-70 w-full object-cover transition-transform duration-500 group-hover:scale-[1.02]"
                   />
 
                   {/* Bottom subtle overlay */}
