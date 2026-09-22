@@ -449,7 +449,7 @@ export default function DoctorsPage() {
 
 
                     {/* Description */}
-                    <div className="mt-5 min-h-[150px]">
+                    <div className="mt-5 min-h-[100px]">
 
                       <p className="text-sm leading-7 text-gray-600">
                         {doctor.description}
