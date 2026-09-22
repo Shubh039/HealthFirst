@@ -4,7 +4,7 @@ import { ArrowUpRight, Clock3 } from "lucide-react";
 const doctors = [
   {
     name: "Dr. Dalimi Mushahary",
-    qualification: "MBBS MS-DNB",
+    qualification: "MBBS MS,DNB",
     specialty: "Obstetrics and Gynecology",
     opd: "Mon - Sat",
     timing: "9:00 AM - 5:00 PM",

@@ -54,7 +54,7 @@ const doctors = [
     name: "Dr. Dalimi Mushahary",
     category: "Obstetrics & Gynaecology",
     qualification:
-      "MBBS, MS (Obstetrics & Gynaecology) — VMMC & Safdarjung Hospital, AIIMS New Delhi, LHMC",
+      "MBBS, MS,DNB (Obstetrics & Gynaecology) — VMMC & Safdarjung Hospital, AIIMS New Delhi, LHMC",
     role: "Consultant Obstetrician & Gynaecologist",
     specialty: "Obstetrics & Gynaecological Surgeries",
     experience: "Maternal & Women's Health",
