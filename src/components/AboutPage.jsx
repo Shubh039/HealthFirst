@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import StoryMedia from "@/components/StoryMedia";
-import Reveal from "@/components/Reveal";
 
 import {
   ArrowUpRight,
@@ -16,7 +15,6 @@ import {
   Activity,
   Quote,
   Award,
-  BriefcaseMedical,
 } from "lucide-react";
 
 /* =========================================================

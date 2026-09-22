@@ -11,21 +11,48 @@ import BlogUpdates from "@/components/BlogUpdates";
 import InsurancePanels from "@/components/InsurancePanels";
 import ContactAppointment from "@/components/ContactAppointment";
 import Footer from "@/components/Footer";
+import ScrollReveal from "@/components/ScrollReveal";
 
 export default function HomePage() {
   return (
     <>
       <Header />
       <Hero />
-      <StatsBar />
-      <About />
-      <Specialities />
-      <EmergencyBanner />
-      <Doctors />
-      <PatientJourney />
-      <Testimonials />
-      <BlogUpdates />
+
+      <ScrollReveal>
+        <StatsBar />
+      </ScrollReveal>
+
+      <ScrollReveal>
+        <About />
+      </ScrollReveal>
+
+      <ScrollReveal>
+        <Specialities />
+      </ScrollReveal>
+
+      <ScrollReveal>
+        <EmergencyBanner />
+      </ScrollReveal>
+
+      <ScrollReveal>
+        <Doctors />
+      </ScrollReveal>
+
+      <ScrollReveal>
+        <PatientJourney />
+      </ScrollReveal>
+
+      <ScrollReveal>
+        <Testimonials />
+      </ScrollReveal>
+
+      <ScrollReveal>
+        <BlogUpdates />
+      </ScrollReveal>
+
       {/* <InsurancePanels /> */}
+
       <Footer />
     </>
   );
