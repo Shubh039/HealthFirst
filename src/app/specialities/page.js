@@ -12,15 +12,8 @@ export default function SpecialitiesPage() {
   return (
     <>
       <Header />
-
-      <ScrollReveal>
       <SpecialitiesHero />
-      </ScrollReveal>
-
-      <ScrollReveal>
       <SpecialitiesGrid />
-      </ScrollReveal>
-
       <Footer />
     </>
   );

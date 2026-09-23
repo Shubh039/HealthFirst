@@ -11,11 +11,7 @@ export default function AboutUs() {
   return (
     <>
       <Header />
-
-      <ScrollReveal>
-        <DoctorsPage />
-      </ScrollReveal>
-
+      <DoctorsPage />
       <Footer />
     </>
   );

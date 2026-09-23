@@ -13,7 +13,7 @@ export default function Blogs() {
       <Header />
 
       <ScrollReveal>
-        <BlogsPage />
+      <BlogsPage />
       </ScrollReveal>
 
       <Footer />

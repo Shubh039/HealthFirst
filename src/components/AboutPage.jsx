@@ -127,7 +127,7 @@ const facilities = [
   {
     title: "Patient Rooms & Wards",
     category: "PATIENT COMFORT",
-    image: "/images/about/general-ward.jpeg",
+    image: "/images/about/patient-beds.jpeg",
     icon: Building2,
     text: "Clean, comfortable inpatient spaces designed to support recovery and patient wellbeing.",
   },
