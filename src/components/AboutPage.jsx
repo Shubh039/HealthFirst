@@ -206,7 +206,7 @@ const gallery = [
     alt: "Hospital Exterior",
   },
   {
-    image: "/images/about/corridor-hospital.jpeg",
+    image: "/images/about/gallery/corridor-hospital.jpeg",
     alt: "Corridor",
   },
   {
