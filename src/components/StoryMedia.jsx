@@ -5,19 +5,19 @@ import Image from "next/image";
 
 const storyImages = [
   {
-    src: "/images/about/surgical-room-2.jpeg",
+    src: "/images/about/stories/surgical-room-2.jpeg",
     alt: "HealthFirst Hospital corridor",
   },
   {
-    src: "/images/about/ward.jpeg",
+    src: "/images/about/stories/ward.jpeg",
     alt: "HealthFirst Hospital patient ward",
   },
   {
-    src: "/images/about/reception.jpeg",
+    src: "/images/about/stories/reception.jpeg",
     alt: "HealthFirst Hospital reception",
   },
   {
-    src: "/images/about/waiting-area.jpeg",
+    src: "/images/about/stories/inside-hospital.jpg",
     alt: "HealthFirst Hospital exterior",
   },
 ];

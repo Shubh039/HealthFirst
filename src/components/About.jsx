@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { siteConfig } from "@/config/site";
 
 export default function About() {
@@ -18,7 +19,6 @@ export default function About() {
 
             {/* Section Label */}
             <div className="flex items-center gap-3">
-
               <p className="text-sm font-semibold uppercase tracking-[0.2em] text-brand-teal">
                 About Us
               </p>
@@ -36,10 +36,11 @@ export default function About() {
             <p className="mt-7 text-base leading-8 text-gray-600 sm:text-lg">
               {siteConfig.name} {siteConfig.nameSub} has been established
               with a clear vision of bringing quality, comprehensive and
-              accessible healthcare closer to the community. Our approach is centred around the needs of every patient,
-              bringing multidisciplinary and specialised care together under
-              one roof while creating an environment built on trust,
-              compassion and personalised attention.
+              accessible healthcare closer to the community. Our approach is
+              centred around the needs of every patient, bringing
+              multidisciplinary and specialised care together under one roof
+              while creating an environment built on trust, compassion and
+              personalised attention.
             </p>
 
             {/* CTA */}
@@ -57,7 +58,6 @@ export default function About() {
             </div>
           </div>
 
-
           {/* =========================
               RIGHT — IMAGE GALLERY
           ========================== */}
@@ -67,42 +67,47 @@ export default function About() {
             <div className="grid grid-cols-2 gap-4">
 
               {/* Main Image */}
-              <div className="group relative row-span-2 overflow-hidden rounded-3xl shadow-xl">
-                <img
-                  src="/images/healthFirst-dayview.jpeg"
+              <div className="group relative row-span-2 min-h-[430px] overflow-hidden rounded-3xl shadow-xl">
+                <Image
+                  src="/images/about-healthFirst-dayview.jpeg"
                   alt="HealthFirst Hospital"
-                  className="h-full min-h-[430px] w-full object-cover transition duration-700 ease-out group-hover:scale-105"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="object-cover transition duration-700 ease-out group-hover:scale-105"
                 />
 
                 {/* Subtle overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/20 via-transparent to-transparent" />
               </div>
 
-              {/* Hallway */}
-              <div className="group overflow-hidden rounded-3xl shadow-lg">
-                <img
-                  src="/images/surgical-room.jpeg"
-                  alt="HealthFirst Hospital hallway"
-                  className="h-52 w-full object-cover transition duration-700 ease-out group-hover:scale-105 sm:h-60"
+              {/* Surgical Room */}
+              <div className="group relative h-52 overflow-hidden rounded-3xl shadow-lg sm:h-60">
+                <Image
+                  src="/images/about-surgical-room.jpeg"
+                  alt="HealthFirst Hospital surgical room"
+                  fill
+                  sizes="(max-width: 1024px) 50vw, 25vw"
+                  className="object-cover transition duration-700 ease-out group-hover:scale-105"
                 />
               </div>
 
               {/* Reception */}
-              <div className="group overflow-hidden rounded-3xl shadow-lg">
-                <img
+              <div className="group relative h-52 overflow-hidden rounded-3xl shadow-lg sm:h-60">
+                <Image
                   src="/images/about-desk.jpg"
                   alt="HealthFirst Hospital reception"
-                  className="h-52 w-full object-cover transition duration-700 ease-out group-hover:scale-105 sm:h-60"
+                  fill
+                  sizes="(max-width: 1024px) 50vw, 25vw"
+                  className="object-cover transition duration-700 ease-out group-hover:scale-105"
                 />
               </div>
             </div>
-
 
             {/* =========================
                 FLOATING PROMISE CARD
             ========================== */}
             <div
-            className="
+              className="
                 absolute
                 -bottom-7
                 left-5
@@ -120,17 +125,17 @@ export default function About() {
                 animate-float
                 sm:left-8
                 sm:w-[330px]
-            "
+              "
             >
-            <div className="absolute left-0 top-5 h-10 w-1 rounded-r-full bg-brand-gold" />
+              <div className="absolute left-0 top-5 h-10 w-1 rounded-r-full bg-brand-gold" />
 
-            <p className="pl-2 text-[11px] font-semibold uppercase tracking-[0.18em] text-brand-teal">
+              <p className="pl-2 text-[11px] font-semibold uppercase tracking-[0.18em] text-brand-teal">
                 Our Promise
-            </p>
+              </p>
 
-            <p className="mt-1 pl-2 text-base font-bold leading-snug text-brand-navy">
+              <p className="mt-1 pl-2 text-base font-bold leading-snug text-brand-navy">
                 Compassionate care. Every patient.
-            </p>
+              </p>
             </div>
 
           </div>

@@ -124,6 +124,24 @@ const doctors = [
     ],
     photo: "/images/doctors/Doc-Saurabh-Gadi.jpeg",
   },
+  {
+  name: "Dr. Ved Prakash Sagar",
+  category: "Internal Medicine",
+  qualification:
+    "MBBS, MD (Medicine) — VMMC & Safdarjung Hospital, New Delhi",
+  role: "Consultant Physician",
+  specialty: "Internal Medicine & Adult Healthcare",
+  experience: "15+ Years of Clinical Experience",
+  description:
+    "Highly experienced Consultant Physician with 15+ years of clinical experience in the diagnosis and management of a wide range of medical conditions, with expertise in comprehensive adult healthcare, chronic disease management, and evidence-based treatment.",
+  expertise: [
+    "Cardiology & Cardiovascular Risk Management",
+    "Diabetes & Metabolic Disorders",
+    "Hypertension & Lifestyle-Related Diseases",
+    "Acute & Chronic Medical Conditions",
+  ],
+  photo: "/images/doctors/Doc-Ved-Prakash-Sagar-1.jpeg",
+  },
 ];
 
 const categories = [

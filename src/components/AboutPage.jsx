@@ -202,20 +202,20 @@ const leadership = [
 
 const gallery = [
   {
-    image: "/images/about/exterior.jpg",
-    alt: "HealthFirst Hospital exterior",
+    image: "/images/about/gallery/hospital-exterior.png",
+    alt: "Hospital Exterior",
   },
   {
-    image: "/images/about/corridor.jpg",
-    alt: "HealthFirst Hospital corridor",
+    image: "/images/about/corridor-hospital.jpeg",
+    alt: "Corridor",
   },
   {
-    image: "/images/about/ward.jpeg",
-    alt: "HealthFirst Hospital patient ward",
+    image: "/images/about/gallery/general-ward.jpeg",
+    alt: "Patient General Ward",
   },
-  { image: "/images/about/PatientRoom-1.jpeg", alt: "Patient Room", }, 
-  { image: "/images/about/waiting-area.jpeg", alt: "Waiting Area", }, 
-  { image: "/images/about/interior.jpeg", alt: "Hospital interior", },
+  { image: "/images/about/gallery/patient-room.jpeg", alt: "Patient Room", }, 
+  { image: "/images/about/gallery/waiting-area.jpeg", alt: "Waiting Area", }, 
+  { image: "/images/about/gallery/hospital-interior.jpeg", alt: "Hospital interior", },
 ];
 
 /* =========================================================
@@ -999,12 +999,6 @@ export default function AboutPage() {
 
                     <span className="text-sm font-medium text-white">
                       {item.alt}
-                    </span>
-
-                    <span className="flex h-9 w-9 items-center justify-center rounded-full border border-white/25 bg-white/10 text-white opacity-0 backdrop-blur-md transition-all duration-300 group-hover:opacity-100">
-
-                      <ArrowUpRight className="h-4 w-4" />
-
                     </span>
 
                   </div>
